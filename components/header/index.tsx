@@ -1,6 +1,6 @@
 const Header = ({ initials }: { initials: String }) => {
     return (
-        <div className="flex justify-between min-w-full">
+        <div className="flex justify-between items-center min-w-full">
             <Initials initials={initials} />
             <ContactBtn />
         </div>
@@ -17,7 +17,7 @@ const Initials = ({ initials }: { initials: String }) => {
 
 export const ContactBtn = () => {
     return (
-        <button className="px-4 py-1 text-sm font-medium text-black border rounded-full bg-customyellow hover:border-black h-9 dark:bg-orange-300">
+        <button className="px-4 py-1 text-sm font-medium text-black border border-transparent rounded-full bg-customyellow hover:border-black dark:hover:border-transparent h-9 dark:bg-orange-300">
             Contact Me
         </button>
     );
