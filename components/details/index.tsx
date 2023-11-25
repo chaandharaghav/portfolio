@@ -1,17 +1,24 @@
+import About from "../about";
 import DetailsTopSection from "../detailsTopSection";
+import project from "../project/type";
+import Projects from "../project";
 import Skills from "../skills";
 import Tools from "../tools";
 
 const Details = ({
     company,
     currentFocus,
+    about,
     skills,
     tools,
+    projects,
 }: {
     company: string;
     currentFocus: string;
+    about: string;
     skills: string[];
     tools: string[];
+    projects: project[];
 }) => {
     return (
         <div className="w-full min-h-screen mt-6 lg:mt-0 lg:px-20 lg:pr-10 lg:border-l lg:border-l-bordergray">
@@ -23,6 +30,8 @@ const Details = ({
                 <Skills skills={skills} />
                 <Tools tools={tools} />
             </div>
+            <About about={about} />
+            <Projects projects={projects} />
         </div>
     );
 };
