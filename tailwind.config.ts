@@ -12,6 +12,7 @@ const config: Config = {
                 customyellow: "#EEE841",
                 customgray: "#1F2937",
                 bordergray: "#D0D1D7",
+                dark_project_bg: "#CBCBD7",
             },
         },
     },

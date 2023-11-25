@@ -11,7 +11,9 @@ const capitalize = (str: string): string => {
 const Projects = ({ projects }: { projects: project[] }) => {
     return (
         <div>
-            <h3 className="mt-16 mb-10 text-lg font-bold">Projects</h3>
+            <h3 className="mt-10 mb-8 text-lg font-bold lg:mb-10 lg:mt-16">
+                Projects
+            </h3>
             <ul>
                 {projects.map((project, idx) => (
                     <Project key={idx} project={project} />
@@ -24,12 +26,12 @@ const Projects = ({ projects }: { projects: project[] }) => {
 const Project = ({ project }: { project: project }) => {
     const { name, link, description, status, techstack } = project;
     return (
-        <div className="w-full p-6 mb-6 bg-white border-t-4 rounded-sm border-t-gray-300">
-            <h5 className="font-bold text-md">{name}</h5>
-            <p className="text-sm underline hover:cursor-pointer">
+        <div className="w-full p-6 mb-6 bg-white border-t-4 rounded-sm dark:bg-dark_project_bg dark:border-t-8 dark:border-t-gray-500 border-t-gray-300 dark:text-black">
+            <h5 className="font-bold text-md ">{name}</h5>
+            <p className="text-sm underline hover:cursor-pointer ">
                 <Link href={link}>{link}</Link>
             </p>
-            <p className="mt-5">{description}</p>
+            <p className="mt-5 text-sm">{description}</p>
             <div className="flex flex-wrap mt-6">
                 <Pill content={capitalize(status)} isStatus />
                 {techstack.map((tech, idx) => (

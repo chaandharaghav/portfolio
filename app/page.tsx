@@ -12,14 +12,21 @@ export default function Home() {
         currentFocus: "Scaling backend",
         skills: ["Java", "Javascript", "Postgres"],
         tools: ["Intellij", "Git", "VS Code"],
-        social: [
-            { platform: "github", link: "github.com/chaandharaghav" },
-            { platform: "linkedin", link: "github.com/chaandharaghav" },
+        socials: [
+            {
+                platform: "github",
+                link: "https://www.github.com/chaandharaghav",
+            },
+            {
+                platform: "linkedin",
+                link: "https://www.linkedin.com/in/chaandha-raghav-465090194/",
+            },
+            { platform: "mail", link: "chaandharaghav@gmail.com" },
         ],
         about: `
-        Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
+        I am a seasoned software developer at Zoho Corp, specializing in Java, JavaScript, React, Node.js, and database technologies like PostgreSQL and MySQL.
         
-        User generated content in real-time will have multiple touchpoints for offshoring. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.`,
+        With a proven track record, I have successfully designed and implemented a scalable logging feature for Zoho, ensuring robust and efficient tracking of system activities. My passion lies in crafting elegant solutions to complex problems, and I thrive on staying at the forefront of technology.`,
         projects: [
             {
                 name: "Shopping cart",
@@ -49,11 +56,12 @@ export default function Home() {
     return (
         <main className="flex flex-col min-h-screen p-8">
             <Header initials={data.initials} />
-            <div className="flex flex-col px-4 pt-24 md:flex-row md:px-12 lg:px-32 ">
+            <div className="flex flex-col px-4 pt-24 lg:flex-row md:px-12 lg:px-32 ">
                 <Profile
                     name={data.name}
                     role={data.role}
                     location={data.location}
+                    socials={data.socials}
                 />
                 <Details
                     currentFocus={data.currentFocus}

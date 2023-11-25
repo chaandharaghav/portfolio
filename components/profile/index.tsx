@@ -1,20 +1,26 @@
 import Image from "next/image";
 import LocationImage from "@/public/locationIcon.svg";
 
+import Social from "@/components/social";
+import social from "@/components/social/type";
+
 const Profile = ({
     role,
     name,
     location,
+    socials,
 }: {
     role: string;
     name: string;
     location: string;
+    socials: social[];
 }) => {
     return (
-        <div className="max-w-sm lg:mr-32">
+        <div className="max-w-sm md:max-w-md lg:max-w-sm lg:mr-32">
             <h2 className="text-2xl">{role}</h2>
-            <h1 className="text-5xl py-6 font-extrabold break-words">{name}</h1>
+            <h1 className="py-6 text-5xl font-extrabold break-words">{name}</h1>
             <Location location={location} />
+            <Social socials={socials} />
         </div>
     );
 };
@@ -22,13 +28,13 @@ const Profile = ({
 const Location = ({ location }: { location: string }) => {
     return (
         <div className="flex">
-            <span className="bg-black min-h-max flex items-center">
+            <span className="flex items-center bg-black min-h-max">
                 <LocationIcon
-                    className="text-customyellow w-10 "
+                    className="w-10 text-customyellow "
                     dimension="25px"
                 />
             </span>
-            <span className="text-lg ml-1 inline-block bg-black font-semibold p-1 px-2 dark:bg-white dark:text-black dark:font-semibold text-white max-w-100">
+            <span className="inline-block p-1 px-2 ml-1 text-lg font-semibold text-white bg-black dark:bg-slate-200 dark:text-black dark:font-semibold max-w-100">
                 {location}
             </span>
         </div>

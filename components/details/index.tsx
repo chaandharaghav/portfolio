@@ -21,8 +21,8 @@ const Details = ({
     projects: project[];
 }) => {
     return (
-        <div className="w-full min-h-screen mt-6 lg:mt-0 lg:px-20 lg:pr-10 lg:border-l lg:border-l-bordergray">
-            <div className="grid grid-rows-2 lg:grid-cols-2 w-max lg:pl-10">
+        <div className="w-full min-h-screen mt-20 lg:mt-0 lg:px-20 lg:pr-10 lg:border-l lg:border-l-bordergray lg:dark:border-l-gray-700">
+            <div className="grid grid-rows-2 md:grid-cols-2 w-max">
                 <DetailsTopSection header="company" value={company} />
                 <DetailsTopSection header="focused on" value={currentFocus} />
             </div>
