@@ -6,7 +6,7 @@ export default function Home() {
     const data = {
         initials: "CR",
         name: "Chaandha Raghav",
-        role: "Web Developer",
+        role: "Software Developer",
         location: "Chennai, India",
         company: "Zoho Corporation",
         currentFocus: "Scaling backend",
