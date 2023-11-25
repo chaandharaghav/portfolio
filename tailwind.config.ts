@@ -10,6 +10,8 @@ const config: Config = {
         extend: {
             colors: {
                 customyellow: "#EEE841",
+                customgray: "#1F2937",
+                bordergray: "#D0D1D7",
             },
         },
     },

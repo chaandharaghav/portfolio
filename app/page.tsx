@@ -1,3 +1,4 @@
+import Details from "@/components/details";
 import Header from "@/components/header";
 import Profile from "@/components/profile";
 import Image from "next/image";
@@ -8,7 +9,8 @@ export default function Home() {
         name: "Chaandha Raghav",
         role: "Web Developer",
         location: "Chennai, India",
-        company: "Zohocorp",
+        company: "Zoho Corporation",
+        currentFocus: "Scaling backend",
         skills: ["Java", "Javascript", "Postgres"],
         tools: ["Intellij", "Git", "VS Code"],
         social: [
@@ -23,11 +25,17 @@ export default function Home() {
     return (
         <main className="flex flex-col min-h-screen p-8">
             <Header initials={data.initials} />
-            <div className="px-4 md:px-12 lg:px-32 pt-24">
+            <div className="flex flex-col md:flex-row px-4 md:px-12 lg:px-32 pt-24 ">
                 <Profile
                     name={data.name}
                     role={data.role}
                     location={data.location}
+                />
+                <Details
+                    currentFocus={data.currentFocus}
+                    company={data.company}
+                    skills={data.skills}
+                    tools={data.tools}
                 />
             </div>
         </main>

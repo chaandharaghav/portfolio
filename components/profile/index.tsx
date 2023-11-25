@@ -11,7 +11,7 @@ const Profile = ({
     location: string;
 }) => {
     return (
-        <div className="max-w-sm">
+        <div className="max-w-sm lg:mr-32">
             <h2 className="text-2xl">{role}</h2>
             <h1 className="text-5xl py-6 font-extrabold break-words">{name}</h1>
             <Location location={location} />
@@ -28,7 +28,7 @@ const Location = ({ location }: { location: string }) => {
                     dimension="25px"
                 />
             </span>
-            <span className="text-lg ml-1 inline-block bg-black font-semibold p-1 px-2 dark:bg-white dark:text-black text-white max-w-100">
+            <span className="text-lg ml-1 inline-block bg-black font-semibold p-1 px-2 dark:bg-white dark:text-black dark:font-semibold text-white max-w-100">
                 {location}
             </span>
         </div>
